@@ -1,0 +1,31 @@
+# Никогда не коммитить содержимое — эти пути не нужны в репозитории.
+*.key
+logs/
+audio/
+models/
+venv/
+python/
+bin/
+__pycache__/
+*.pyc
+*.wav
+*.mp3
+*.rar
+*.zip
+
+# Мусор от сборки
+build/
+.gradle/
+out/
+run/
+
+# Отладочные скрипты, которые остались локально
+bench_*.py
+*_probe.py
+prompt_probe.py
+tools_*.py
+
+# keys.env здесь НЕ игнорируется: он лежит в репозитории пустым шаблоном,
+# чтобы проект запускался сразу после клонирования. От случайной публикации
+# настоящих ключей защищает хук .githooks/pre-commit:
+#     git config core.hooksPath .githooks
